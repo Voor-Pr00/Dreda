@@ -1,3 +1,9 @@
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+if game:GetService("ReplicatedStorage").GameData.Floor.Value == "Hotel" then
+if game.ReplicatedStorage.GameData.LatestRoom.Value == 50 then
+
+---====== Load spawner ======---
+
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
 
 ---====== Create entity ======---
@@ -26,7 +32,7 @@ local entity = spawner.Create({
 	},
 	Movement = {
 		Speed = 340,
-		Delay = 5,
+		Delay = 10,
 		Reversed = false
 	},
 	Rebounding = {
@@ -58,6 +64,8 @@ local entity = spawner.Create({
 
 entity:SetCallback("OnSpawned", function()
     print("Entity has spawned")
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Hide now!!!",true)
+
 end)
 
 entity:SetCallback("OnStartMoving", function()
@@ -90,7 +98,6 @@ end)
 
 entity:SetCallback("OnDespawning", function()
     print("Entity is despawning")
-
 ---====== Load achievement giver ======---
 local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
 
@@ -126,10 +133,6 @@ achievementGiver({
     Reason = "Die by Drade",
     Image = "rbxassetid://16898011321"
 })
-
-for _, player in pairs(game.Players:GetPlayers()) do
-    player:Kick("Game Over")
-
 end)
 
 ---====== Run entity ======---
