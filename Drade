@@ -133,8 +133,12 @@ achievementGiver({
     Reason = "Die by Drade",
     Image = "rbxassetid://16898011321"
 })
+
 end)
 
 ---====== Run entity ======---
 
 entity:Run()
+end
+end
+end)
