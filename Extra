@@ -18,7 +18,7 @@ local SelfModules = {
 }
  
 -- Load a custom instance model from a URL or local file
-local customRoom = SelfModules.Functions.LoadCustomInstance("https://raw.githubusercontent.com/Voor-Pr00/Bloopies/refs/heads/main/cusssstooo.rbxm?raw=true")
+local customRoom = SelfModules.Functions.LoadCustomInstance("https://raw.githubusercontent.com/Voor-Pr00/Dreda/refs/heads/main/cucucusssss.rbxm?raw=true")
 customRoom.Parent = game.Workspace.CurrentRooms[lastroom]
 
 --
