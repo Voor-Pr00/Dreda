@@ -39,7 +39,7 @@ model:SetPrimaryPartCFrame(reversedCFrame)
 game:GetService("Workspace").CurrentRooms[lastroom].Sideroom:Destroy()
 end
 --
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Voor-Pr00/Bloopies/refs/heads/main/Custom"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Voor-Pr00/Bloopies/refs/heads/main/Customm"))()
 --
 end)
 --
